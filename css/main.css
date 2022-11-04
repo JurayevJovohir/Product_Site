@@ -969,6 +969,7 @@ a {
 
     .strategies__div {
         width: max-content;
+        margin: 0 auto;
     }
 
     .strategies__list {
@@ -1174,7 +1175,9 @@ a {
 
     .price__item {
         margin-bottom: 32px;
+        text-align: center;
     }
+
 }
 
 /*===MAIN SECTION 6 FINISH===*/
@@ -1270,7 +1273,7 @@ a {
         text-align: center;
     }
 
-    .client__text{
+    .client__text {
         text-align: center;
     }
 
@@ -1329,12 +1332,30 @@ a {
 
 @media only screen and (max-width:576px) {
     .boost-span {
+        margin-bottom: 0;
+        padding: 0;
+        width: 100%;
         max-width: 371px;
         height: 688px;
+        justify-content: center;
+        background-position: bottom center;
     }
 
-    .boost__link{
-        
+    .boost__inner {
+        align-items: center;
+    }
+
+    .boost__text {
+        margin: 0 auto 50px;
+        padding-top: 17px;
+        width: 328px;
+        text-align: center;
+    }
+
+    .boost__link {
+        display: block;
+        width: 150px;
+        margin: 0 auto;
     }
 
 }
@@ -1439,6 +1460,52 @@ input {
 @media only screen and (max-width:576px) {
     .footer__inner {
         flex-direction: column;
+    }
+
+    .logo-div,
+    .network-div,
+    .resource-div,
+    .legal-div,
+    .register-div {
+        margin: 0 auto;
+    }
+
+    .network-div {
+        margin: 29px 0 32px;
+    }
+
+    .resource-div {
+        margin-bottom: 32px;
+    }
+
+    .resource__item,
+    .legal__item {
+        text-align: center;
+    }
+
+    .legal-div {
+        margin-bottom: 32px;
+    }
+
+    .register__text {
+        text-align: center;
+    }
+
+    input {
+        display: block;
+        margin-left: -26px;
+    }
+
+    .register__btn {
+        display: block;
+        width: 131px;
+        margin: 21px auto 0px;
+    }
+
+    .footer__small {
+        display: block;
+        width: 361px;
+        margin: 44px auto  45px;
     }
 }
 

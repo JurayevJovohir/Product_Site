@@ -60,21 +60,22 @@ a{
 }
 
 .container{
-    width: 1140px;
+    width: 100%;
+    max-width: 1140px;
     margin: 0 auto;
     padding: 0 20px;
 }
 /*===HEADER START===*/
-.site-header{
+.site-header {
     padding: 19px 0;
 }
 
-.site-header__inner{
+.site-header__inner {
     display: flex;
     align-items: center;
 }
 
-.site-nav__list{
+.site-nav__list {
     display: flex;
     margin: 0;
     padding: 0;
@@ -82,11 +83,11 @@ a{
     list-style-type: none;
 }
 
-.site-nav__item + .site-nav__item{
+.site-nav__item+.site-nav__item {
     margin-left: 35px;
 }
 
-.site-nav__link{
+.site-nav__link {
     display: inline-block;
     font-style: normal;
     font-weight: 400;
@@ -96,12 +97,13 @@ a{
     text-decoration: none;
 }
 
-.site-register{
+.site-register {
     margin-left: 24px;
 }
 
-.site-register__link{
-    display: inline-block;;
+.site-register__link {
+    display: inline-block;
+    ;
     padding: 10px 22px;
     font-weight: 600;
     font-size: 16px;
@@ -113,23 +115,46 @@ a{
     transition: all 0.4s ease;
 }
 
-.site-register__link:hover{
+.site-register__link:hover {
     color: #FFFFFF;
     background: #02897A;
     transition: all 0.4s ease;
-    
+
 }
 
-.site-register__link + .site-register__link{
+.site-register__link+.site-register__link {
     margin-left: 24px;
 }
 
-.btn{
+.btn {
     padding: 0;
     border: none;
-    background: #F3F3F3;
-    border-radius: 100px;
+    background: transparent;
     margin-left: auto;
+}
+
+.menu-btn {
+    display: none;
+    border: none;
+    background: transparent;
+}
+
+@media only screen and (max-width:576px) {
+
+    .site-header{
+        box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.25);
+    }
+
+    .site-nav,
+    .site-register,
+    .btn {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+        margin-left: auto;
+    }
 }
 /*===HEADER FINISH===*/
 
@@ -311,6 +336,27 @@ a{
     color: #02897A;
     background: #FFFFFF;
 }
+
+@media only screen and (max-width:576px) {
+
+    .table-div{
+        width: 100%;
+        max-width: 352px;
+        margin: auto;
+    }
+
+    .price__list{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 322px;
+        margin: auto;
+    }
+
+    .price__item{
+        margin-bottom: 32px;
+    }
+}
 /*===MAIN SECTION PRICE FINISH===*/
 
 /*===MAIN SECTION EXPENSIVE START===*/
@@ -369,9 +415,18 @@ a{
 }
 
 .services__inner{
+    position: relative;
+}
+
+.services__bg{
+    display: inline-block;
+    width: 100%;
+    max-width: 528px;
+    height: 393px;
     background-image: url('../pricing_images/amico.png');
     background-repeat: no-repeat;
-    background-position:  0% 100%;
+    position: absolute;
+    top: 130px;
 }
 
 .services__title{
@@ -436,14 +491,44 @@ a{
     line-height: 28px;
     color: var(--nav-text-color);    
 }
+
+@media only screen and (max-width:576px) {
+    .service-section{
+        flex-direction: column;
+        background-image: url(../images/account_image.png);
+        background-repeat: no-repeat;
+        background-position: center top 175px;
+
+    }
+
+    .services__title{
+        padding-bottom: 360px;
+        width: 100%;
+        max-width: 342px;
+        margin: auto;
+    }
+
+    .services__bg{
+        display: none;
+    }
+
+    .system-div{
+        width: 100%;
+        max-width: 333px;
+        margin-right: 175px;
+    }
+
+}
 /*===SERVICE SECTION FINISH===*/
 
-.boost-span{
+/*===MAIN SECTION 7 FINISH===*/
+.boost-span {
     display: block;
     margin: 0 auto;
     margin-bottom: 154px;
     padding: 50px;
-    width: 968px;
+    width: 100%;
+    max-width: 968px;
     height: 345px;
     background: #02897A;
     border-radius: 32px;
@@ -453,11 +538,12 @@ a{
 }
 
 
-.boost__inner{
-    width: 495px;
+.boost__inner {
+    max-width: 495px;
+    
 }
 
-.boost__text{
+.boost__text {
     margin: 0;
     font-weight: 600;
     font-size: 32px;
@@ -467,9 +553,9 @@ a{
 }
 
 
-.boost__link{
+.boost__link {
     display: inline-block;
-    padding: 13px 34px 7px ;
+    padding: 13px 34px 7px;
     font-weight: 600;
     font-size: 20px;
     line-height: 30px;
@@ -477,6 +563,37 @@ a{
     background: #FFFFFF;
     border-radius: 8px;
     text-decoration: none;
+
+}
+
+@media only screen and (max-width:576px) {
+    .boost-span {
+        margin-bottom: 0;
+        padding: 0;
+        width: 100%;
+        max-width: 371px;
+        height: 688px;
+        justify-content: center;
+        background-position: bottom center;
+    }
+
+    .boost__inner {
+        
+        padding-bottom: 380px;
+    }
+
+    .boost__text {
+        margin: 0 auto 50px;
+        padding-top: 17px;
+        max-width: 328px;
+        text-align: center;
+    }
+
+    .boost__link {
+        display: block;
+        max-width: 150px;
+        margin: 0 auto;
+    }
 
 }
 
@@ -554,6 +671,12 @@ a{
     display: inline-block;
     width: 100%;
     border: 1px solid #E7E7E7;
+}
+
+@media only screen and (max-width:576px) {
+    .question__title, .question__dash{
+        text-align: center;
+    }
 }
 /*===QUESTIONS SECTION FINISH===*/
 
@@ -650,19 +773,61 @@ input{
     line-height: 30px;
     color: var(--nav-text-color);
 }
+
+
+@media only screen and (max-width:576px) {
+    .footer__inner {
+        margin-top: 100px;
+        flex-direction: column;
+    }
+
+    .logo__div,
+    .network-div,
+    .resource-div,
+    .legal-div,
+    .register-div {
+        margin: 0 auto;
+    }
+
+    .network-div {
+        margin: 29px 0 32px;
+    }
+
+    .resource-div {
+        margin-bottom: 32px;
+    }
+
+    .resource__item,
+    .legal__item {
+        text-align: center;
+    }
+
+    .legal-div {
+        margin-bottom: 32px;
+    }
+
+    .register__text {
+        text-align: center;
+    }
+
+    input {
+        display: block;
+        margin-left: -26px;
+    }
+
+    .register__btn {
+        display: block;
+        width: 131px;
+        margin: 21px auto 0px;
+    }
+
+    .footer__small {
+        display: block;
+        width: 100%;
+        max-width: 361px;
+        margin: 44px auto  45px;
+    }
+} 
 /*===FOOTER FINISH===*/
-@media
-only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (   min--moz-device-pixel-ratio: 2),
-only screen and (     -o-min-device-pixel-ratio: 2/1),
-only screen and (        min-device-pixel-ratio: 2),
-only screen and (                min-resolution: 192dpi),
-only screen and (                min-resolution: 2dppx) { 
-  
-    .intro{
-        background-image: url('../images/amico1@2x.png');
-    }
-    .customer-section__inner{
-    background-image: url('../images/amico@2x.png'), url('../images/amico2@2x.png'),url('../images/amico3@2x.png');
-    }
-}
+
+
